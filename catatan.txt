@@ -1,0 +1,5 @@
+disini menggunakan vendor seet alert
+
+
+pake laravel shoppingcart
+composer require "darryldecode/cart:~4.0"
