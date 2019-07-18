@@ -29,14 +29,15 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Data Penulis buku </h5>
+                                <h5 class="mb-0">Data Rak buku perpustakaan</h5>
                                 <p>Disini tercantum nama para penulis buku yang ada di perpustakaan</p>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                     <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
-                       Tambah Category
+                       Tambah Rak buku
                     </button>
+                    <br><br>
 
                                     <table id="example2" class="table table-striped table-bordered" style="width:100%">
                                         <thead class="table-primary">
@@ -59,7 +60,7 @@
                                                     <form action="/admin/shelf/{{$shelf->id}}" method="POST" enctype="multipart/form-data">
                                                     {{csrf_field()}}
                                                     {{method_field('DELETE')}}        
-                                                    <a href="{{url('admin/shelf/'.$shelf->id.'/edit')}}" class="btn btn-success btn-sm"  ">edit</a>
+                                                    <a href="{{url('admin/shelf/'.$shelf->id.'/edit')}}" class="btn btn-success btn-sm"  ">EDIT</a>
                                                     
                                                     <input type="submit" name="" value="DELETE" class="btn btn-danger btn-sm"  onclick="return confirm('yakin mau dihapus.?')">
                                                     </form>  
@@ -86,7 +87,7 @@
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Tambah Category</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Rak buku</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -97,12 +98,12 @@
 
                       <div class="form-group">
                         <label for="code">Code</label>
-                        <input type="text" class="form-control" name="code" placeholder="Masukan judul Kode Rak">
+                        <input type="text" class="form-control" name="code" placeholder="Masukan Kode Rak">
                       </div>
 
                       <div class="form-group">
                         <label for="position">Position</label>
-                        <textarea name="position" placeholder="masukan posisi" class="form-control"></textarea>
+                        <textarea name="position" placeholder="masukan posisi rak buku" class="form-control"></textarea>
                       </div>
 
               

@@ -114,7 +114,7 @@
 
                       <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Masukan judul nama Author">
+                        <input type="text" class="form-control" name="name" placeholder="Masukan nama Author">
                       </div>
 
                       <div class="form-group">
@@ -124,12 +124,12 @@
 
                         <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Masukan judul nomor handphone">
+                        <input type="text" class="form-control" name="phone" placeholder="Masukan nomor handphone Penulis">
                       </div>
 
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Masukan judul alamat">
+                        <input type="email" class="form-control" name="email" placeholder="Masukan alamat email">
                       </div>
 
                                          

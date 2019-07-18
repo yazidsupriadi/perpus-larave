@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Author;
+use Alert;
 class AuthorController extends Controller
 {
     /**
@@ -39,6 +40,7 @@ class AuthorController extends Controller
         //
 
         $authors = Author::create($request->all());
+        Alert::success('Data was added successfully', 'Thanks!');
         return redirect('/admin/author');
     }
 
@@ -83,6 +85,7 @@ class AuthorController extends Controller
         $authors->phone = $request->phone;
         $authors->email = $request->email;
         $authors->update();
+        Alert::success('Data was updated successfully', 'Thanks!');
         return redirect('/admin/author');
     }
 
@@ -97,6 +100,7 @@ class AuthorController extends Controller
         //
         $authors = Author::find($id);
         $authors->delete();
+        Alert::success('Data was deleted successfully', 'Thanks!');
         return redirect('/admin/author');
     
     }

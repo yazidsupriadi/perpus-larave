@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Book;
 use Auth;
+use Alert;
 class BerandaController extends Controller
 {
     //
@@ -41,13 +42,14 @@ class BerandaController extends Controller
     {
     	$category = $this->category;
     	$books = Book::where('id',$id)->first();
-    	return view('homepage.detail',compact('books','category'));
+    	return view('homepage.detailku',compact('books','category'));
 
     }
 
     public function logout()
     {
     	Auth::logout();
+        Alert::success('You was logged out successfully', 'Thanks!');
     	return redirect('/');
     }
 }

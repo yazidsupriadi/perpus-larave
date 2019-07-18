@@ -202,7 +202,7 @@
                       <div class="form-group">
                           <select name="shelf_id" class="form-control">
 
-                              <option value="">Pilih Code buku</option>}
+                              <option value="">Pilih Code Rak</option>}
                               @foreach($shelfs as $shelf)
                               <option value="{{$shelf->id}}">{{$shelf->code}}</option>
                               @endforeach

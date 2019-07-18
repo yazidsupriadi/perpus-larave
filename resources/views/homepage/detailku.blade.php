@@ -37,27 +37,16 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="box">
-                    <form>
                       <p class="price">Code : {{$books->code}}</p>
-                      <div class="sizes">
-                        <select class="bs-select">
-                          <?php for($i = 1; $i < $books->qty; $i+1){
-                           echo'<option value="small">'.$i.'</option>';
-                          }
-                          ?>
-                        </select>
-                      </div>
-    
-                        <p class="text-center"></p>
+                      <input type="hidden" name="id" value="{{$books->name}}"> 
                       <p class="text-center">
                         @if(Auth::user())
-                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                        <a href="{{url('/cart/'.$books->id.'/formulir')}}">Pinjam</a>
                         <button type="submit" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn btn-default"><i class="fa fa-heart-o"></i></button>
                         @else
                         <h6>anda harus login terlebih dahulu untuk melakukan peminjaman buku</h6>
                         @endif
                       </p>
-                    </form>
                   </div>
                   
                 </div>
@@ -65,9 +54,6 @@
               <div id="details" class="box mb-4 mt-4">
                 <p></p>
                 <h4>Book details</h4>
-                <p>Penulis :{{$books->author->name}}</p>    
-                      <p>Tahun terbit : {{$books->publication_year}}</p>
-                      <p>Jumlah Halaman :{{$books->pages}}</p>
                       <p>Penerbit : {{$books->publication_year}}</p>
                       <p>Jumlah buku{{$books->qty}}</p>               
                 <p>{!!$books->description!!}</p>

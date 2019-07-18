@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use Alert;
 class CategoryController extends Controller
 {
     //
@@ -15,6 +16,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
     	$categories = Category::create($request->all());
+        Alert::success('Data Category was added successfully', 'Thanks!');
     	return redirect('admin/category');
     }
     public function edit($id)
@@ -28,6 +30,7 @@ class CategoryController extends Controller
     {
     	$categories = Category::find($id);
     	$categories->update($request->all());
+        Alert::success('Data category was updated successfully', 'Thanks!');
         return redirect('/admin/category');
     
     }
@@ -35,6 +38,7 @@ class CategoryController extends Controller
     {
     	$categories = Category::find($id);
     	$categories->delete();
+        Alert::success('Data category was deleted successfully', 'Thanks!');
      	return redirect('/admin/category');
     	
     }

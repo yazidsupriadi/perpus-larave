@@ -89,13 +89,15 @@
       <!-- Navbar Start-->
       <header class="nav-holder make-sticky">
         <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-          <div class="container"><a href="index.html" class="navbar-brand home"><img src="img/logo.png" alt="Perpustakaan batam" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Perpustakaan batam" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+          <div class="container">
+            <h3 class="text-success">Perpustakaan Batam</h3>
+            <span class="sr-only">Universal - go to homepage</span></a>
             <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <div id="navigation" class="navbar-collapse collapse">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item dropdown active"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Home <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a href="index.html" class="nav-link">Home Page</a></li>
+                    <li class="dropdown-item"><a href="/" class="nav-link">Home Page</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Books<b class="caret"></b></a>
@@ -109,14 +111,7 @@
                             <li class="nav-item"><a href="{{url('/allbook')}}" class="nav-link">See All Books</a></li>
                           </ul>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                          <h5>Header variations</h5>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-header-default.html" class="nav-link">Default sticky header</a></li>
-                            <li class="nav-item"><a href="template-header-nosticky.html" class="nav-link">No sticky header</a></li>
-                            <li class="nav-item"><a href="template-header-light.html" class="nav-link">Light header</a></li>
-                          </ul>
-                        </div>
+                  
                       </div>
                     </li>
                   </ul>
@@ -148,15 +143,15 @@
                 <!-- ========== Contact dropdown ==================-->
                 <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Contact <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a href="contact.html" class="nav-link">Contact option 1</a></li>
-                    <li class="dropdown-item"><a href="contact2.html" class="nav-link">Contact option 2</a></li>
-                    <li class="dropdown-item"><a href="contact3.html" class="nav-link">Contact option 3</a></li>
+                    <li class="dropdown-item"><a href="{{url('contact')}}" class="nav-link">Contact Us</a></li>
                   </ul>
                 </li>
                   @if(Auth::user())
                 <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">{{Auth::user()->name}}<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a href="{{url('member/logout')}}" class="nav-link">Logout</a></li> 
+                       <li class="dropdown-item"><a href="{{url('cart/myloaning')}}" class="nav-link">My Loaning</a></li>
+                  
+                    <li class="dropdown-item"><a href="{{url('member/logout')}}" class="nav-link">Logout</a></li>   
                   </ul>
                 </li>
                 @endif

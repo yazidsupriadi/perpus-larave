@@ -19,7 +19,7 @@ class CreateLoaningsTable extends Migration
             $table->date('loaning_date');
             $table->date('returning_date');
             $table->longText('description');
-            $table->enum('returning_status',['late','on_time']);
+            $table->enum('returning_status',['late','on_loaning','on_time']);
             $table->string('fine')->nullable();
             $table->integer('qty')->nullable();
             $table->unsignedInteger('user_id')->nullable();

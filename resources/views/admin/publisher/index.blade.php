@@ -113,22 +113,22 @@
 
                       <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Masukan judul nama Author">
+                        <input type="text" class="form-control" name="name" placeholder="Masukan nama Publisher">
                       </div>
 
                       <div class="form-group">
                         <label for="address">Alamat</label>
-                        <textarea name="address" placeholder="masukan alamat" class="form-control"></textarea>
+                        <textarea name="address" placeholder="masukan alamat publisher" class="form-control"></textarea>
                       </div>
 
                         <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Masukan judul nomor handphone">
+                        <input type="text" class="form-control" name="phone" placeholder="Masukan judul nomor handphone publisher">
                       </div>
 
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Masukan judul alamat">
+                        <input type="email" class="form-control" name="email" placeholder="Masukan  alamat e-mail Publisher">
                       </div>
 
                                          

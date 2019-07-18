@@ -80,6 +80,8 @@
                                                 
                                                 <td>@if($loaning->returning_status == 'on_time')
                                                        <a href="{{url('admin/loaning/status/'.$loaning->id)}}" class="btn btn-primary btn-sm">Tepat Waktu</a>
+                                                    @elseif($loaning->returning_status == 'on_loaning')
+                                                       <a href="{{url('admin/loaning/status/'.$loaning->id)}}" class="btn btn-success btn-sm">On Loaning</a>
                                                     @else
                                                        <a href="{{url('admin/loaning/status/'.$loaning->id)}}" class="btn btn-danger btn-sm ">Telat</a>
                                                     

@@ -8,7 +8,7 @@
                 <div class="item">
                   <div class="row">
                     <div class="col-md-5 text-right">
-                      <p><img src="img/logo.png" alt="" class="ml-auto"></p>
+                      <p><img src="{{asset('admin/img/book/1.jpg')}}" alt="" class="ml-auto"></p>
                       <h1>Multipurpose responsive theme</h1>
                       <p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>
                     </div>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="item">
                   <div class="row">
-                    <div class="col-md-7 text-center"><img src="img/template-mac.png" alt="" class="img-fluid"></div>
+                    <div class="col-md-7 text-center"><img src="{{asset('admin/img/book/1.jpg')}}" alt="" class="img-fluid"></div>
                     <div class="col-md-5">
                       <h2>46 HTML pages full of features</h2>
                       <ul class="list-unstyled">
@@ -40,12 +40,12 @@
                         <li>7 preprepared colour variations</li>
                       </ul>
                     </div>
-                    <div class="col-md-7"><img src="img/template-easy-customize.png" alt="" class="img-fluid"></div>
+                    <div class="col-md-7"><img src="{{asset('admin/img/book/1.jpg')}}" alt="" class="img-fluid"></div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="row">
-                    <div class="col-md-7"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
+                    <div class="col-md-7"><img src="{{asset('admin/img/book/Koala.jpg')}}" alt="" class="img-fluid"></div>
                     <div class="col-md-5">
                       <h1>Easy to customize</h1>
                       <ul class="list-unstyled">

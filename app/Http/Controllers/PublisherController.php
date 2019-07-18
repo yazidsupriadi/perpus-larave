@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Publisher;
+use Alert;
 class PublisherController extends Controller
 {
     /**
@@ -38,6 +39,7 @@ class PublisherController extends Controller
     {
         //
         $publishers = Publisher::create($request->all());
+        Alert::success('Data Publisher was added successfully', 'Thanks!');
         return redirect('/admin/publisher');
 
     }
@@ -82,6 +84,7 @@ class PublisherController extends Controller
         $publishers->phone = $request->phone;
         $publishers->email = $request->email;
         $publishers->update();
+        Alert::success('Data Publsiher was updated successfully', 'Thanks!');
         return redirect('/admin/publisher');
 
     }
@@ -97,6 +100,7 @@ class PublisherController extends Controller
         //
         $publishers = Publisher::find($id);
         $publishers->delete();
+        Alert::success('Data Publisher was deleted successfully', 'Thanks!');
         return redirect('admin/publisher');
     }
 

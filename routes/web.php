@@ -15,12 +15,17 @@
 Route::get('/','BerandaController@index');
 Route::get('/allbook','BerandaController@allbook');
 Route::get('/book/{name}','BerandaController@bookbycategory');
-Route::get('/book/{id}/detail','BerandaController@detail');
+Route::get('/book/detail/{id}','BerandaController@detail');
 Route::get('/member/register','AuthController@register');
 Route::post('/member/store','AuthController@store')->name('home.register');
 Route::post('/member/login','AuthController@login')->name('login');
 Route::get('/member/logout','BerandaController@logout')->name('logout');
-Route::get('cart/{id}','CartController@index');
+Route::post('/cart','CartController@index');
+Route::get('cart/{id}/formulir','CartController@formulir');
+Route::post('cart','CartController@cartstore');
+Route::get('cart/myloaning','CartController@myloaning');
+Route::get('contact','ContactController@index');
+Route::post('contact','ContactController@store');
 Auth::routes();
 
 Route::group(['prefix'=>'admin','middleware' => ['auth','checkStatus:admin'] ],function()

@@ -31,7 +31,7 @@
                   @foreach($books as $book)
                   <div class="col-lg-3 col-md-4">
                     <div class="product">
-                      <div class="image"><a href="{{url('/book/'.$book->id.'/detail')}}"><img src="{{asset('admin/img/book/'.$book->picture)}}" alt="" class="img-fluid image1"></a></div>
+                      <div class="image"><a href="{{url('/book/detail/'.$book->id)}}"><img src="{{asset('admin/img/book/'.$book->picture)}}" alt="" class="img-fluid image1"></a></div>
                       <div class="text">
                         <h3 class="h5"><a href="{{url('/book/'.$book->id.'/detail')}}">{{$book->name}}</a></h3>
                         <p class="price">Halaman Buku : {{$book->pages}}</p>
